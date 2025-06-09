@@ -15,7 +15,7 @@ const stats: StatItem[] = [
 
 export const Stats = () => {
     return (
-        <div className="mx-auto max-w-full px-4 pb-10 py-2">
+        <div className="mx-auto max-w-full px-2 pb-10 py-2">
             <div className="grid grid-cols-2 md:grid-cols-4 border-4 border-accent  rounded-3xl overflow-hidden">
                 {stats.map((stat, idx) => {
                     let num: number;

@@ -45,23 +45,20 @@ export default function Header() {
                 top: {
                     height: 100,
                     width: '100%',
-                    margin: '0 auto',
                     top: 0,
                     borderRadius: '0rem',
                     backgroundColor: 'rgba(255, 255, 255, 1)',
                     backdropFilter: 'none',
-                    boxShadow: 'none',
-                    borderBottom: 'none',
+                    WebkitBackdropFilter: 'none',
                 },
                 scrolled: {
                     height: 72,
                     width: '87%',
-                    margin: '0 auto',
                     top: 16,
                     borderRadius: '9999px',
                     backgroundColor: 'rgba(250, 249, 251, 0.6)',
                     backdropFilter: 'blur(10px)',
-                    boxShadow: 'none',
+                    WebkitBackdropFilter: 'blur(10px)',
                     border: '1px solid rgba(0,0,0,0.06)',
                     transition: {
                         type: 'spring',
@@ -70,10 +67,12 @@ export default function Header() {
                     },
                 },
             }}
-            className="fixed left-0 right-0 z-50 flex items-center"
+            className="fixed left-0 right-0 z-50 flex items-center backdrop-blur-md backdrop-saturate-100"
             style={{willChange: 'height, border-radius, background-color, backdrop-filter, width, margin'}}
         >
-            <nav className="w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-14 flex items-center justify-between h-full">
+
+            <nav
+                className="w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-14 flex items-center justify-between h-full">
                 {/* Лого / Название */}
                 <a href="#" className="block h-14 w-auto">
                     <img src="/2.png" alt="Логотип компании" className="h-14 w-50"/>
@@ -106,7 +105,7 @@ export default function Header() {
                             className="absolute top-full left-1/2 z-50 mt-4 w-56 rounded-xl bg-white shadow-2xl ring-1 ring-gray-200 overflow-hidden animate-fade-in -translate-x-1/2"
                         >
 
-                        <ul className="divide-y divide-gray-100">
+                            <ul className="divide-y divide-gray-100">
                                 {services.map((service) => (
                                     <li key={service}>
                                         <a

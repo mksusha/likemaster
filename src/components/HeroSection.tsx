@@ -12,7 +12,7 @@ export default function HeroSection() {
     return (
         <>
             {/* Hero-блок */}
-            <section className="mt-28 sm:mt-32 mb-10 px-4 w-full flex justify-center">
+            <section className="mt-28 sm:mt-32 mb-10 px-2 w-full flex justify-center">
                 <div
                     className="relative flex flex-col md:flex-row items-start md:items-center justify-between
                     bg-[#2B272D] text-white rounded-[24px] md:rounded-[32px]
