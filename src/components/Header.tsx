@@ -67,7 +67,7 @@ export default function Header() {
                     },
                 },
             }}
-            className="fixed left-0 right-0 z-50 flex items-center backdrop-blur-md backdrop-saturate-100"
+            className="fixed left-0 right-0 m-auto w-auto z-50 flex items-center backdrop-blur-md backdrop-saturate-100"
             style={{willChange: 'height, border-radius, background-color, backdrop-filter, width, margin'}}
         >
 
