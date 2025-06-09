@@ -59,7 +59,7 @@ export default function Header() {
                     margin: '0 auto',
                     top: 16,
                     borderRadius: '9999px',
-                    backgroundColor: 'rgba(250, 249, 251, 0.8)',
+                    backgroundColor: 'rgba(250, 249, 251, 0.6)',
                     backdropFilter: 'blur(10px)',
                     boxShadow: 'none',
                     border: '1px solid rgba(0,0,0,0.06)',

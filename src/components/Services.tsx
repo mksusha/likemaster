@@ -76,7 +76,7 @@ const fadeInUp = {
 export default function Services() {
     return (
         <motion.section
-            className="py-16 px-6"
+            className="py-8 sm:py-14 px-4"
             id="services"
             initial="hidden"
             whileInView="visible"
