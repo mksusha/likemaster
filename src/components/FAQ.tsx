@@ -49,6 +49,7 @@ function FAQEntry({ item, isOpen, onToggle }: FAQItemProps) {
     return (
         <motion.div
             ref={ref}
+
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4 }}
@@ -85,7 +86,7 @@ export default function FAQ() {
     }
 
     return (
-        <section className="py-10 bg-white">
+        <section  id="faq" className="py-10 bg-white">
             <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
                 <div className="mb-16 text-center">
                     <h6 className="text-lg text-accent font-medium mb-2">FAQ & помощь</h6>

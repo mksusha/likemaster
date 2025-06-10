@@ -114,8 +114,8 @@ const scrollToId = (id: string, headerOffset = 70) => {
 export default function Services() {
     return (
         <motion.section
-            className="py-8 sm:py-14 px-2"
-            id="services"
+            className="py-8 sm:py-16 px-2"
+            id="all-services"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
