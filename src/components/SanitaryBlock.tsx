@@ -16,7 +16,7 @@ export default function PlumberBlock() {
     return (
         <section id="plumber" className="w-full px-2 py-16 bg-white">
             <div className="mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-stretch">
-                {/* Текст — на мобилках первый, на десктопе второй */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -47,7 +47,7 @@ export default function PlumberBlock() {
                             'Замена труб и стояков',
                             'Подключение стиральных машин и бойлеров',
                             'Установка фильтров и счётчиков воды',
-                            'Прокладка новых водопроводных и канализационных систем', // новая услуга
+                            'Прокладка новых водопроводных и канализационных систем',
                         ].map((item, i) => (
                             <motion.li
                                 key={i}
@@ -68,7 +68,7 @@ export default function PlumberBlock() {
                     </div>
                 </motion.div>
 
-                {/* Правая часть */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -82,7 +82,7 @@ export default function PlumberBlock() {
                 >
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
-                            src="/1.jpg" // оригинал (большой)
+                            src="/1.jpg"
                             srcSet="/1-small.jpg 480w, /1-medium.jpg 768w, /1.jpg 1200w"
                             sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Сантехник за работой"

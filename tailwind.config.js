@@ -7,12 +7,12 @@ export default {
     extend: {
       colors: {
         accent: {
-          DEFAULT: '#F4B310', // основной акцент
-          hover: '#d99e0f',   // ховер-жёлтый (темнее)
+          DEFAULT: '#F4B310',
+          hover: '#d99e0f',
         },
         darkAccent: {
-          DEFAULT: '#2B272D', // тёмно-синий
-          hover: '#39333a',   // ховер-синий (светлее)
+          DEFAULT: '#2B272D',
+          hover: '#39333a',
         },
       },
       fontFamily: {

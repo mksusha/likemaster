@@ -33,7 +33,6 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    // Функция плавного скролла с offset
     const smoothScrollTo = (targetY: number, duration = 800) => {
         const startY = window.scrollY
         const distance = targetY - startY
@@ -55,7 +54,7 @@ export default function Header() {
     }
 
     const scrollToId = (id: string, offset = 70) => {
-        if (id === 'contacts' || id === 'about') offset = 100; // для этих блоков больший отступ
+        if (id === 'contacts' || id === 'about') offset = 100;
         const element = document.getElementById(id);
         if (element) {
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
@@ -65,7 +64,6 @@ export default function Header() {
     }
 
 
-    // Обработчик клика по ссылке меню
     const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
         e.preventDefault()
         scrollToId(anchor)
@@ -106,12 +104,12 @@ export default function Header() {
             style={{ willChange: 'height, border-radius, background-color, backdrop-filter, width, margin' }}
         >
             <nav className="w-full max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-14 flex items-center justify-between h-full">
-                {/* Лого / Название */}
+                
                 <a href="#" className="block h-14 w-auto">
                     <img src="/2.png" alt="Логотип компании" className="h-14 w-50" />
                 </a>
 
-                {/* Десктоп меню с Popover */}
+                
                 <PopoverGroup className="hidden lg:flex lg:gap-x-10 text-gray-700 font-medium items-center">
                     <Popover className="relative">
                         <PopoverButton
@@ -186,7 +184,7 @@ export default function Header() {
 
                 </PopoverGroup>
 
-                {/* Кнопка открытия мобильного меню */}
+
                 <button
                     type="button"
                     className="lg:hidden p-2 text-gray-700"
@@ -197,7 +195,7 @@ export default function Header() {
                 </button>
             </nav>
 
-            {/* Мобильное меню */}
+            
             <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
                 <DialogPanel className="fixed inset-0 z-50 bg-white p-6 overflow-y-auto">
                     <div className="flex items-center justify-between mb-8">
@@ -216,10 +214,10 @@ export default function Header() {
                     </div>
                     <nav>
                         <ul className="space-y-6 text-lg font-medium text-gray-700">
-                        {/* Добавляем новые основные пункты */}
+                        
 
 
-                            {/* Остальные пункты из services, если нужны */}
+                            
                             {services.map((service) => (
                                 <li key={service.name} className="border-b border-gray-200 pb-2">
                                     <a

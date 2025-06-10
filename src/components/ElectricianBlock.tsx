@@ -16,7 +16,7 @@ export default function ElectricianBlock() {
     return (
         <section id="electrician" className="w-full px-2 md:py-16 py-10 bg-white">
             <div className="mx-auto grid lg:grid-cols-2 md:gap-16 gap-8 items-stretch">
-                {/* Правая часть — текст, на мобилках первая */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -47,7 +47,7 @@ export default function ElectricianBlock() {
                             'Монтаж светильников и люстр',
                             'Установка автоматических выключателей',
                             'Диагностика и устранение электрических неисправностей',
-                            'Монтаж систем умного дома и автоматизации', // новая услуга
+                            'Монтаж систем умного дома и автоматизации',
                         ].map((item, i) => (
                             <motion.li
                                 key={i}
@@ -67,7 +67,7 @@ export default function ElectricianBlock() {
                     </div>
                 </motion.div>
 
-                {/* Левая часть — фото и кнопка, на мобилках вторая */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

@@ -16,7 +16,7 @@ export default function FinishingBlock() {
     return (
         <section id="finishing" className="w-full px-2 py-16 bg-white">
             <div className="mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-stretch">
-                {/* Текстовая часть */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -66,7 +66,7 @@ export default function FinishingBlock() {
                     </div>
                 </motion.div>
 
-                {/* Фото и кнопка */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

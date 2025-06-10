@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/*:root {*/
 
-/*  font-synthesis: none;*/
-/*  text-rendering: optimizeLegibility;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*}*/
+
+
+
+
+
+
 
 #root {
   width: 100%;
@@ -50,7 +50,7 @@ h1 {
   font-display: swap;
 }
 
-/* Обязательно задай font-family базово: */
+
 html {
   font-family: 'Nunito', sans-serif;
 }

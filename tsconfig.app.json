@@ -7,7 +7,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    "types": ["react", "react-dom"],  // ✅ ← ЭТО РЕШАЕТ TS2503
+    "types": ["react", "react-dom"],
 
 
 

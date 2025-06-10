@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="bg-white mt-16 border-t-2 border-l-2 border-r-2 border-darkAccent/50 py-10 px-6 rounded-t-3xl">
             <div className="max-w-[1350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-darkAccent">
-                {/* Логотип */}
+                {}
                 <a href="#" className="block h-14 w-auto">
                     <img
                         src="/2.png"
@@ -13,37 +13,41 @@ export default function Footer() {
                     />
                 </a>
 
-                {/* Ссылки */}
-                <div className="flex flex-col md:flex-row gap-4 md:gap-10 text-center md:text-left text-sm md:text-base">
+                {}
+                <div
+                    className="flex flex-col md:flex-row gap-4 md:gap-10 text-center md:text-left text-sm md:text-base">
                     <a
-                        href="/Публичная оферта для заказчика.pages"
-                        download
+                        href="/oferta.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:text-accent transition-colors cursor-pointer"
                     >
                         Публичная оферта
                     </a>
                     <a
-                        href="/Политика конфиденциальности.pages"
-                        download
+                        href="/privacy.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:text-accent transition-colors cursor-pointer"
                     >
                         Политика конфиденциальности
                     </a>
+
                 </div>
 
-                {/* Телефон */}
+                {}
                 <div className="flex flex-col items-center md:items-end gap-2">
                     <a
                         href="tel:+71234567890"
                         className="flex items-center gap-2 hover:text-accent transition-colors font-semibold"
                     >
-                        <Phone size={22} />
+                    <Phone size={22} />
                         <span className="text-lg">+7 (123) 456-78-90</span>
                     </a>
                 </div>
             </div>
 
-            {/* Нижний копирайт под бордером */}
+            {}
             <div className="mt-6 border-t border-darkAccent/30 pt-4 text-center text-sm text-darkAccent/70 select-none">
                 © ЛАЙКМАСТЕР Москва, 2025. Все права защищены.
             </div>

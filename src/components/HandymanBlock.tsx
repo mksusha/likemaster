@@ -16,7 +16,7 @@ export default function HandymanBlock() {
     return (
         <section id="handyman" className="w-full px-2 py-16 bg-white">
             <div className="mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-stretch">
-                {/* Текстовая часть */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -66,7 +66,7 @@ export default function HandymanBlock() {
                     </div>
                 </motion.div>
 
-                {/* Правая часть */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

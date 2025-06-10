@@ -16,7 +16,7 @@ export default function ApplianceRepairBlock() {
     return (
         <section id="appliance-repair" className="w-full px-2 md:py-16 py-10 bg-white">
             <div className="mx-auto grid lg:grid-cols-2 md:gap-16 gap-8 items-stretch">
-                {/* Правая часть — текст, на мобилках первая */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -66,7 +66,7 @@ export default function ApplianceRepairBlock() {
                     </div>
                 </motion.div>
 
-                {/* Левая часть — фото и кнопка */}
+                {}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

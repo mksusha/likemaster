@@ -8,7 +8,7 @@ export default function ContactBlock() {
         <section id="contacts" className="w-full px-2 sm:px-6">
             <div className="md:mt-16 mt-8 md:py-20 py-12 bg-darkAccent rounded-3xl text-white">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-10">
-                    {/* Левая часть — Заголовок и описание */}
+                    {}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function ContactBlock() {
                         </p>
                     </motion.div>
 
-                    {/* Правая часть — Сами контакты */}
+                    {}
                     <motion.div
                         initial={{opacity: 0, y: 30}}
                         whileInView={{opacity: 1, y: 0}}
