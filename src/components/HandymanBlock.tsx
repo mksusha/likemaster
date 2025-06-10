@@ -81,10 +81,13 @@ export default function HandymanBlock() {
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
                             src="/3.jpg"
+                            srcSet="/3-small.jpg 480w, /3-medium.jpg 768w, /3.jpg 1200w"
+                            sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Мастер выполняет мелкий ремонт"
                             className="object-cover w-full h-full"
                             loading="lazy"
                         />
+
                     </div>
 
                     <button

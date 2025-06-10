@@ -81,10 +81,13 @@ export default function ApplianceRepairBlock() {
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
                             src="/5.jpg"
+                            srcSet="/5-small.jpg 480w, /5-medium.jpg 768w, /5.jpg 1200w"
+                            sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Мастер ремонтирует бытовую технику"
                             className="object-cover w-full h-full"
                             loading="lazy"
                         />
+
                     </div>
                     <button
                         type="button"

@@ -82,11 +82,14 @@ export default function PlumberBlock() {
                 >
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
-                            src="/1.jpg"
+                            src="/1.jpg" // оригинал (большой)
+                            srcSet="/1-small.jpg 480w, /1-medium.jpg 768w, /1.jpg 1200w"
+                            sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Сантехник за работой"
                             className="object-cover w-full h-full"
                             loading="lazy"
                         />
+
                     </div>
 
                     <button

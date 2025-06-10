@@ -81,10 +81,13 @@ export default function FinishingBlock() {
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
                             src="/7.jpg"
+                            srcSet="/7-small.jpg 480w, /7-medium.jpg 768w, /7.jpg 1200w"
+                            sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Отделочные работы в процессе"
                             className="object-cover w-full h-full"
                             loading="lazy"
                         />
+
                     </div>
 
                     <button

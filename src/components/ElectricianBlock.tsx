@@ -82,10 +82,13 @@ export default function ElectricianBlock() {
                     <div className="rounded-3xl overflow-hidden shadow-2xl flex-grow">
                         <img
                             src="/2.jpg"
+                            srcSet="/2-small.jpg 480w, /2-medium.jpg 768w, /2.jpg 1200w"
+                            sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
                             alt="Электрик за работой"
                             className="object-cover w-full h-full"
                             loading="lazy"
                         />
+
                     </div>
                     <button
                         type="button"
