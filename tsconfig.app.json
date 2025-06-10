@@ -10,6 +10,11 @@
     "types": ["react", "react-dom"],  // ✅ ← ЭТО РЕШАЕТ TS2503
 
 
+
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+
+
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

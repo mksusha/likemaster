@@ -1,6 +1,13 @@
 'use client';
 
-import { Wrench, Plug, Hammer, WashingMachine, Paintbrush, PhoneCall } from 'lucide-react';
+import {
+    Wrench,
+    Plug,
+    Hammer,
+    WashingMachine,
+    Paintbrush,
+    PhoneCall,
+} from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -73,10 +80,41 @@ const fadeInUp = {
     },
 };
 
+
+const smoothScrollTo = (targetY: number, duration = 1000) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t: number) =>
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const step = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
+
+const scrollToId = (id: string, headerOffset = 70) => {
+    const element = document.getElementById(id);
+    if (element) {
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+        smoothScrollTo(offsetPosition, 1000);
+    }
+};
+
+
 export default function Services() {
     return (
         <motion.section
-            className="py-8 sm:py-14 px-2 "
+            className="py-8 sm:py-14 px-2"
             id="services"
             initial="hidden"
             whileInView="visible"
@@ -91,11 +129,11 @@ export default function Services() {
                     variants={fadeContainer}
                 >
                     {services.map((service) => (
-                        <motion.a
+                        <motion.div
                             key={service.id}
-                            href={`#${service.id}`}
                             variants={fadeInItem}
-                            className={`group block rounded-2xl p-8 bg-darkAccent hover:bg-darkAccent-hover transition-colors duration-300 border border-transparent hover:border-accent shadow-lg hover:shadow-2xl ${
+                            onClick={() => scrollToId(service.id)}
+                            className={`cursor-pointer group block rounded-2xl p-8 bg-darkAccent hover:bg-darkAccent-hover transition-colors duration-300 border border-transparent hover:border-accent shadow-lg hover:shadow-2xl ${
                                 service.spanCols ? 'lg:col-span-2' : ''
                             }`}
                         >
@@ -106,7 +144,7 @@ export default function Services() {
                                 </h3>
                             </div>
                             <p className="text-gray-300 text-base leading-relaxed">{service.description}</p>
-                        </motion.a>
+                        </motion.div>
                     ))}
                 </motion.div>
 
@@ -138,12 +176,12 @@ export default function Services() {
                                 или оставьте заявку ниже.
                             </p>
                         </div>
-                        <a
-                            href="#contact"
+                        <button
+                            onClick={() => scrollToId('contact')}
                             className="px-6 py-3 text-base font-semibold rounded-full bg-black text-accent hover:bg-black/80 transition whitespace-nowrap"
                         >
                             Оставить заявку
-                        </a>
+                        </button>
                     </div>
                 </motion.div>
             </div>
