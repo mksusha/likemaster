@@ -10,6 +10,10 @@ import HandymanBlock from "./components/HandymanBlock.tsx";
 import ApplianceRepairBlock from "./components/ApplianceRepairBlock.tsx";
 import FinishingBlock from "./components/FinishingBlock.tsx";
 import FAQ from "./components/FAQ.tsx";
+import ContactBlock from "./components/ContactBlock.tsx";
+import HowWeWork from "./components/HowWeWork.tsx";
+import Reviews from "./components/Reviews.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
 
@@ -25,9 +29,15 @@ function App() {
                 <HandymanBlock></HandymanBlock>
                 <ApplianceRepairBlock></ApplianceRepairBlock>
                 <FinishingBlock></FinishingBlock>
+                <HowWeWork></HowWeWork>
+                <Reviews></Reviews>
                 <FAQ></FAQ>
+                <ContactBlock></ContactBlock>
+
+                <Footer></Footer>
 
             </div>
+
         </>
     );
 }

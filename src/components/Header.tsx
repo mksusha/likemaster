@@ -55,13 +55,15 @@ export default function Header() {
     }
 
     const scrollToId = (id: string, offset = 70) => {
-        const element = document.getElementById(id)
+        if (id === 'contacts' || id === 'about') offset = 100; // для этих блоков больший отступ
+        const element = document.getElementById(id);
         if (element) {
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY
-            const targetPosition = elementPosition - offset
-            smoothScrollTo(targetPosition)
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const targetPosition = elementPosition - offset;
+            smoothScrollTo(targetPosition);
         }
     }
+
 
     // Обработчик клика по ссылке меню
     const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
@@ -151,11 +153,19 @@ export default function Header() {
                     </Popover>
 
                     <a
-                        href="#contacts"
-                        onClick={(e) => handleMenuClick(e, 'contacts')}
+                        href="#about"
+                        onClick={(e) => handleMenuClick(e, 'about')}
                         className="hover:text-accent font-semibold cursor-pointer"
                     >
-                        Контакты
+                        О работе
+                    </a>
+
+                    <a
+                        href="#reviews"
+                        onClick={(e) => handleMenuClick(e, 'reviews')}
+                        className="hover:text-accent font-semibold cursor-pointer"
+                    >
+                        Отзывы
                     </a>
 
                     <a
@@ -163,8 +173,17 @@ export default function Header() {
                         onClick={(e) => handleMenuClick(e, 'faq')}
                         className="hover:text-accent font-semibold cursor-pointer"
                     >
-                       FAQ
+                        FAQ
                     </a>
+
+                    <a
+                        href="#contacts"
+                        onClick={(e) => handleMenuClick(e, 'contacts')}
+                        className="hover:text-accent font-semibold cursor-pointer"
+                    >
+                        Контакты
+                    </a>
+
                 </PopoverGroup>
 
                 {/* Кнопка открытия мобильного меню */}
@@ -174,7 +193,7 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(true)}
                     aria-label="Открыть меню"
                 >
-                    <Bars3Icon className="h-6 w-6" />
+                    <Bars3Icon className="h-6 w-6"/>
                 </button>
             </nav>
 
@@ -182,40 +201,86 @@ export default function Header() {
             <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
                 <DialogPanel className="fixed inset-0 z-50 bg-white p-6 overflow-y-auto">
                     <div className="flex items-center justify-between mb-8">
-                        <a href="#" className="text-xl font-bold text-gray-900">
-                            Компания
+                        <a href="#" className="block h-14 w-auto">
+                            <img src="/2.png" alt="Логотип компании" className="h-14 w-auto object-contain"/>
                         </a>
+
                         <button
                             type="button"
                             className="p-2 text-gray-700"
                             onClick={() => setMobileMenuOpen(false)}
                             aria-label="Закрыть меню"
                         >
-                            <XMarkIcon className="h-6 w-6" />
+                            <XMarkIcon className="h-6 w-6"/>
                         </button>
                     </div>
                     <nav>
                         <ul className="space-y-6 text-lg font-medium text-gray-700">
-                            {services.map(service => (
+                        {/* Добавляем новые основные пункты */}
+
+
+                            {/* Остальные пункты из services, если нужны */}
+                            {services.map((service) => (
                                 <li key={service.name} className="border-b border-gray-200 pb-2">
                                     <a
                                         href={`#${service.anchor}`}
-                                        onClick={(e) => handleMenuClick(e, service.anchor)}
+                                        onClick={(e) => {
+                                            handleMenuClick(e, service.anchor)
+                                            setMobileMenuOpen(false)
+                                        }}
                                     >
                                         {service.name}
                                     </a>
                                 </li>
                             ))}
                             <li className="border-b border-gray-200 pb-2">
-                                <a href="#contacts" onClick={(e) => handleMenuClick(e, 'contacts')}>
-                                    Контакты
+                                <a
+                                    href="#about"
+                                    onClick={(e) => {
+                                        handleMenuClick(e, 'about')
+                                        setMobileMenuOpen(false)
+                                    }}
+                                    className="hover:text-accent"
+                                >
+                                    О работе
                                 </a>
+                            </li>
 
+                            <li className="border-b border-gray-200 pb-2">
+                                <a
+                                    href="#reviews"
+                                    onClick={(e) => {
+                                        handleMenuClick(e, 'reviews')
+                                        setMobileMenuOpen(false)
+                                    }}
+                                    className="hover:text-accent"
+                                >
+                                    Отзывы
+                                </a>
                             </li>
                             <li className="border-b border-gray-200 pb-2">
-
-                                <a href="#faq" onClick={(e) => handleMenuClick(e, 'faq')}>
+                                <a
+                                    href="#faq"
+                                    onClick={(e) => {
+                                        handleMenuClick(e, 'faq')
+                                        setMobileMenuOpen(false)
+                                    }}
+                                    className="hover:text-accent"
+                                >
                                     FAQ
+                                </a>
+                            </li>
+
+                            <li className="border-b border-gray-200 pb-2">
+                                <a
+                                    href="#contacts"
+                                    onClick={(e) => {
+                                        handleMenuClick(e, 'contacts')
+                                        setMobileMenuOpen(false)
+                                    }}
+                                    className="hover:text-accent"
+                                >
+                                    Контакты
                                 </a>
                             </li>
                         </ul>
